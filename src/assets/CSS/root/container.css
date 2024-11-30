@@ -1,0 +1,122 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #040a11;
+    color: #c2c3bc;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 150px;
+    position: relative;
+    z-index: 1;
+}
+
+.container img {
+    width: 1000px;
+    margin-top: 100px;
+}
+
+.container p {
+    background-color: rgba(255, 255, 255, 0.048);
+    border: 1px solid #252525;
+    color: #cccccc;
+    padding: 7px 15px;
+    font-size: 14px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: -2px;
+    text-shadow: 0px 0px 20px rgb(212, 0, 255);
+}
+
+.container h1 {
+    color: #f3f3f3;
+    margin: 0;
+    font-size: 80px;
+    line-height: 1.1;
+    padding: 30px;
+}
+
+.container .gradation {
+    background: linear-gradient(45deg, #ff6bc6, #9e94f7, #5a1eff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 900px) {
+    .container img {
+        width: 900px;
+        margin-top: 100px;
+    }
+
+    .container h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container img {
+        width: 800px;
+        margin-top: 100px;
+    }
+
+    .container h1 {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container img {
+        width: 700px;
+        margin-top: 100px;
+    }
+
+    .container p {
+        font-size: 10px;
+        margin-bottom: -10px;
+    }
+
+    .container h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container img {
+        width: 600px;
+        margin-top: 100px;
+    }
+
+    .container p {
+        font-size: 10px;
+        margin-bottom: -15px;
+    }
+
+    .container h1 {
+        font-size: 50px;
+    }
+}

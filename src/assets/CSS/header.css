@@ -1,0 +1,134 @@
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(24, 26, 27, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  #languageBox {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  #languageDropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 10px;
+    color: #dadada;
+  }
+  
+  #languageDropdown a {
+    display: block;
+    color: #dadada;
+    padding: 8px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #languageDropdown a:hover {
+    color: #686868;
+  }
+  
+  .left-links {
+    order: 1;
+  }
+  
+  .right-links {
+    order: 2;
+    margin-right: 19px;
+  }
+  
+  .header-a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .header-a img {
+    width: 18px;
+    vertical-align: middle;
+    margin-top: -5px;
+  }
+  
+  .header-a:hover {
+    color: #ffffffb6;
+  }
+  
+  .header-b {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .header-b:hover {
+    text-decoration: underline;
+  }
+  
+  .header-bar {
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    margin-right: 8px;
+    margin-left: -4px;
+  }
+  
+  .fa-link {
+    font-size: 40px;
+  }
+  
+  .fa-circle-exclamation {
+    font-size: 40px;
+  }
+  
+  .fa-brands {
+    font-size: 18px;
+    transition: 0.5s;
+  }
+  
+  .fa-brands:hover {
+    color: rgb(194, 194, 194);
+  }
+  
+  .fa-paper-plane {
+    font-size: 16px;
+    transition: 0.5s;
+  }
+  
+  .fa-paper-plane:hover {
+    color: rgb(194, 194, 194);
+  }
+  
+  .fa-earth-americas {
+    font-size: 15px;
+    transition: 0.5s;
+  }
+  
+  .fa-earth-americas:hover {
+    color: rgb(194, 194, 194);
+  }
+  
+  .fa-boxes-stacked {
+    font-size: 15px;
+    transition: 0.5s;
+  }
+  
+  .fa-boxes-stacked:hover {
+    color: rgb(194, 194, 194);
+  }
