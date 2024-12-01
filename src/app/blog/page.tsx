@@ -5,12 +5,14 @@ import { getAllPosts } from '../../../lib/posts';
 import { Post } from '../../../types/post';
 import { formatDate } from '../../../lib/dateFormat'
 
-// Remove edge runtime since we're using Node.js APIs
-// export const runtime = 'edge';
-
 import '@/assets/CSS/blog/blog.css';
 
 const defaultHeader = "https://zisty.net/images/posts/default-header.jpg";
+
+export const metadata = {
+  title: 'Blog',
+  description: 'This is a blog maintained by a member of Zisty. Please take a look.',
+}
 
 interface BlogProps {
   posts: Post[];
