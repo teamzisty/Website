@@ -5,8 +5,6 @@ import gfm from 'remark-gfm'
 import { getPostBySlug, getAllPosts } from '../../../../lib/posts'
 import { formatDate } from '../../../../lib/dateFormat'
 
-export const runtime = 'edge';
-
 import '@/assets/CSS/blog/post.css'
 
 export async function generateStaticParams() {
