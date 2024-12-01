@@ -5,7 +5,8 @@ import { getAllPosts } from '../../../lib/posts';
 import { Post } from '../../../types/post';
 import { formatDate } from '../../../lib/dateFormat'
 
-export const runtime = 'edge';
+// Remove edge runtime since we're using Node.js APIs
+// export const runtime = 'edge';
 
 import '@/assets/CSS/blog/blog.css';
 
