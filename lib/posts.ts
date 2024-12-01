@@ -1,19 +1,29 @@
-import { readFileSync, readdirSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import { Post } from '../types/post';
 
+let fs: typeof import('fs') | null = null;
+
+if (typeof window === 'undefined') {
+    fs = require('fs');
+}
+
 const postsDirectory = join(process.cwd(), 'posts');
 
 export function getAllPosts(): Post[] {
+    if (!fs) {
+        console.error('File system is not available in the current environment.');
+        return [];
+    }
+
     try {
-        if (!existsSync(postsDirectory)) {
+        if (!fs.existsSync(postsDirectory)) {
             console.warn('Posts directory does not exist. Creating a new directory.');
-            mkdirSync(postsDirectory, { recursive: true });
+            fs.mkdirSync(postsDirectory, { recursive: true });
             return [];
         }
 
-        const fileNames = readdirSync(postsDirectory);
+        const fileNames = fs.readdirSync(postsDirectory);
         if (fileNames.length === 0) {
             console.warn('No markdown files found in the posts directory.');
             return [];
@@ -24,7 +34,7 @@ export function getAllPosts(): Post[] {
             .map((fileName): Post | null => {
                 const slug = fileName.replace(/\.md$/, '');
                 const fullPath = join(postsDirectory, fileName);
-                const fileContents = readFileSync(fullPath, 'utf8');
+                const fileContents = fs!.readFileSync(fullPath, 'utf8');
                 const { data, content } = matter(fileContents);
 
                 // 必須フィールドの検証
@@ -53,9 +63,14 @@ export function getAllPosts(): Post[] {
 }
 
 export function getPostBySlug(slug: string): Post | undefined {
+    if (!fs) {
+        console.error('File system is not available in the current environment.');
+        return undefined;
+    }
+
     try {
         const fullPath = join(postsDirectory, `${slug}.md`);
-        const fileContents = readFileSync(fullPath, 'utf8');
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data, content } = matter(fileContents);
 
         return {
@@ -70,38 +85,5 @@ export function getPostBySlug(slug: string): Post | undefined {
     } catch (error) {
         console.error(`Error reading post with slug "${slug}":`, error);
         return undefined;
-    }
-}
-
-export async function getStaticProps() {
-    try {
-        const posts = getAllPosts();
-        console.log('Loaded posts:', posts);
-        return {
-            props: {
-                posts
-            }
-        };
-    } catch (error) {
-        console.error('Error in getStaticProps:', error);
-        return { props: { posts: [] } };
-    }
-}
-
-export async function getStaticPaths() {
-    try {
-        const posts = getAllPosts();
-        return {
-            paths: posts.map((post) => ({
-                params: { slug: post.slug }
-            })),
-            fallback: true
-        };
-    } catch (error) {
-        console.error('Error in getStaticPaths:', error);
-        return {
-            paths: [],
-            fallback: true
-        };
     }
 }
