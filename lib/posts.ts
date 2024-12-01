@@ -1,19 +1,13 @@
-import { join } from 'path';
+import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 import { Post } from '../types/post';
 
-let fs: typeof import('fs') | null = null;
-
-if (typeof window === 'undefined') {
-    fs = require('fs');
-}
-
-const postsDirectory = join(process.cwd(), 'posts');
+const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getAllPosts(): Post[] {
-    if (!fs) {
-        console.error('File system is not available in the current environment.');
-        return [];
+    if (typeof window !== 'undefined') {
+        throw new Error('getAllPosts should only be called on the server side');
     }
 
     try {
@@ -33,14 +27,13 @@ export function getAllPosts(): Post[] {
             .filter(fileName => fileName.endsWith('.md'))
             .map((fileName): Post | null => {
                 const slug = fileName.replace(/\.md$/, '');
-                const fullPath = join(postsDirectory, fileName);
-                const fileContents = fs!.readFileSync(fullPath, 'utf8');
+                const fullPath = path.join(postsDirectory, fileName);
+                const fileContents = fs.readFileSync(fullPath, 'utf8');
                 const { data, content } = matter(fileContents);
 
-                // 必須フィールドの検証
                 if (!data.title || !data.date) {
                     console.warn(`Skipping file ${fileName} due to missing required fields.`);
-                    return null; // スキップ
+                    return null;
                 }
 
                 return {
@@ -63,13 +56,12 @@ export function getAllPosts(): Post[] {
 }
 
 export function getPostBySlug(slug: string): Post | undefined {
-    if (!fs) {
-        console.error('File system is not available in the current environment.');
-        return undefined;
+    if (typeof window !== 'undefined') {
+        throw new Error('getPostBySlug should only be called on the server side');
     }
 
     try {
-        const fullPath = join(postsDirectory, `${slug}.md`);
+        const fullPath = path.join(postsDirectory, `${slug}.md`);
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data, content } = matter(fileContents);
 
