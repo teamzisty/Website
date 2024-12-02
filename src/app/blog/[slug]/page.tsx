@@ -5,7 +5,7 @@ import gfm from 'remark-gfm'
 import { getPostBySlug, getAllPosts } from '../../../../lib/posts'
 import { formatDate } from '../../../../lib/dateFormat'
 
-import '@/assets/CSS/blog/post.css'
+import styles from '@/assets/CSS/blog/post.module.css'
 
 export async function generateStaticParams() {
     const posts = await getAllPosts()
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     if (!post) {
         return {
-            title: 'Post Not Found / Zisty',
+            title: 'Post Not Found',
             description: 'This post is not available.',
             openGraph: {
                 title: 'Post Not Found',
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const url = `https://www.zisty.net/${slug}`
 
     return {
-        title: `${post.title} / Zisty`,
+        title: `${post.title}`,
         description: description,
         openGraph: {
             title: post.title,
@@ -76,7 +76,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         return (
             <>
                 <main>
-                    <div className="not-found">
+                    <div className={styles.notFound}>
                         <i className="bi bi-cup-hot"></i>
                         <h1>Does not exist</h1>
                         <p>
@@ -97,12 +97,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <>
             <main>
                 <article>
-                    <div className="blog">
-                        <div className="title">
+                    <div className={styles.blog}>
+                        <div className={styles.title}>
                             <p>{formatDate(post.date)}</p>
                             <h1>{post.title}</h1>
                         </div>
-                        <div className="content">
+                        <div className={styles.content}>
                             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
                         </div>
                     </div>
