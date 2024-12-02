@@ -2,7 +2,7 @@
 title: "おや...Blogの様子が!? (おまけあり)"
 date: "2024-12-3"
 description: "Blogの仕様が変わってることに気づいたゾ"
-header: "ヘッダーURL"
+header: "https://github.com/teamzisty/Website/blob/main/public/header/join-as.20241201/header.png?raw=true"
 author: "Syobosyobonn"
 ---
 
@@ -55,4 +55,4 @@ author: "Syobosyobonn"
 ここまでのお相手(?)はSyobosyobonnでしたー<br>
 ではまたー!<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-ヘッダーは...うん...ﾁｮｯﾄﾏｯﾃﾈ
+ヘッダーは...うん...ｺﾞﾒﾝﾅｻｲ
