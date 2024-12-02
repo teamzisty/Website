@@ -2,7 +2,7 @@
 title: "Zistyを宣伝すれば限定ロールが！？"
 date: "2024-12-1"
 description: "Zistyコミュニティーサーバを宣伝すれば限定ロールが！？宣伝しよう！！てかそんなことよりも参加しよう（）"
-header: "https://zisty.net/header/join-us/header.jpg"
+header: "https://github.com/teamzisty/Website/blob/main/public/header/join-as.20241201/header.png?raw=true"
 author: "tanahiro2010"
 ---
 # Zistyに参加しましょう!!
