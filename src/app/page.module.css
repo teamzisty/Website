@@ -1,3 +1,7 @@
+:global(body)  {
+    background-color: #040a11;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
