@@ -1,21 +1,18 @@
 import Image from "next/image";
 import type { ReactNode } from 'react';
-
 import zisty_header from "@/assets/Images/zisty_header.png"
-
-import '@/assets/CSS/element.css'
-import '@/assets/CSS/header.css'
+import './globals.css'
 
 export const metadata = {
 	title: {
 		default: 'Zisty',
 		template: '%s / Zisty'
 	},
-	description: 'We are a team of engineers with the slogan “We turn the unreal to real”.',
+	description: 'We are a team of engineers with the slogan “We turn the unreal to real”. It is a team that stands like a club, consisting mainly of students.',
 	metadataBase: new URL('https://zisty.net'),
 	openGraph: {
 		title: 'We turn the unreal to real',
-		description: 'We are a team of engineers with the slogan “We turn the unreal to real”.',
+		description: 'We are a team of engineers with the slogan “We turn the unreal to real”. It is a team that stands like a club, consisting mainly of students.',
 		url: 'https://zisty.net',
 		siteName: 'Zisty',
 		images: [

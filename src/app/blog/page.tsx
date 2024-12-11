@@ -4,8 +4,7 @@ import Head from 'next/head';
 import { getAllPosts } from '../../../lib/posts';
 import { Post } from '../../../types/post';
 import { formatDate } from '../../../lib/dateFormat'
-
-import styles from '@/assets/CSS/blog/blog.module.css';
+import styles from './page.module.css'
 
 const defaultHeader = "https://zisty.net/images/posts/default-header.jpg";
 
@@ -25,7 +24,6 @@ export default async function Blog() {
       <Head>
         <title>Blog / Zisty</title>
       </Head>
-
       <main>
         <section className={styles.blog} id="Blog">
           <div className={styles.container}>

@@ -1,0 +1,182 @@
+.contents {
+    width: 95%;
+    max-width: 850px;
+    margin: 100px auto;
+    text-align: left;
+}
+
+.contents p {
+    text-align: left;
+}
+
+.contents .title p {
+    font-size: 1em;
+    color: #858585;
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.contents .title h1 {
+    font-size: 2.5em;
+    color: #fff;
+    padding-top: 0px;
+    margin-top: 20px;
+}
+
+.contents .title h1::before {
+    border-top: 2px solid rgba(31, 31, 31, 0);
+}
+
+.contents h1 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    color: #e2e2e2;
+    position: relative;
+    padding-top: 30px;
+}
+
+.contents h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid rgb(36, 36, 36);
+}
+
+.contents h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    color: #e2e2e2;
+    position: relative;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.contents .description {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: #a5a5a5;
+    text-align: left;
+}
+
+.contents .content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #a5a5a5;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.contents .content a {
+    color: #a5a5a5;
+    text-decoration: underline;
+}
+
+.contents .content a:hover {
+    color: #a5a5a5;
+    text-decoration: none;
+}
+
+.contents .content li {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.contents .content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .blog {
+        width: 90%;
+    }
+
+    .blog .title p {
+        font-size: 1em;
+        color: #858585;
+    }
+
+    .blog .title h1 {
+        font-size: 2.3em;
+    }
+
+    .blog h1 {
+        font-size: 1.3em;
+    }
+
+    .blog h2 {
+        font-size: 1.1em;
+    }
+
+    .blog .description {
+        font-size: 1.1em;
+    }
+
+    .blog .content {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 700px) {
+    .blog .title p {
+        font-size: 1em;
+        color: #858585;
+    }
+
+    .blog .title h1 {
+        font-size: 2.2em;
+    }
+
+    .blog h1 {
+        font-size: 1.2em;
+    }
+
+    .blog h2 {
+        font-size: 1.0em;
+    }
+
+    .blog .description {
+        font-size: 1.0em;
+    }
+
+    .blog .content {
+        font-size: 1.0em;
+    }
+}
+
+@media (max-width: 450px) {
+    .blog .title p {
+        font-size: 1em;
+        color: #858585;
+    }
+
+    .blog .title h1 {
+        font-size: 2.1em;
+    }
+
+    .blog h1 {
+        font-size: 1.1em;
+    }
+
+    .blog h2 {
+        font-size: 0.9em;
+    }
+
+    .blog .description {
+        font-size: 0.9em;
+    }
+
+    .blog .content {
+        font-size: 0.9em;
+    }
+}

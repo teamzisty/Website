@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+JP:wght@400;500;900&display=swap');
+
+/* Elements */
+html,
+body {
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-color: #555 #333;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181a1b;
+    color: #c2c3bc;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-top: 40px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+h3 {
+    margin-top: 7px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0066ff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 20px;
+    z-index: 100px;
+}
+
+hr {
+    margin: 50px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Header */
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(24, 26, 27, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+#languageBox {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#languageDropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 10px;
+    color: #dadada;
+}
+
+#languageDropdown a {
+    display: block;
+    color: #dadada;
+    padding: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#languageDropdown a:hover {
+    color: #686868;
+}
+
+.left-links {
+    order: 1;
+}
+
+.right-links {
+    order: 2;
+    margin-right: 19px;
+}
+
+.header-a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.header-a img {
+    width: 18px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.header-a:hover {
+    color: #ffffffb6;
+}
+
+.header-b {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.header-b:hover {
+    text-decoration: underline;
+}
+
+.header-bar {
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    margin-right: 8px;
+    margin-left: -4px;
+}
+
+.fa-link {
+    font-size: 40px;
+}
+
+.fa-circle-exclamation {
+    font-size: 40px;
+}
+
+.fa-brands {
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.fa-brands:hover {
+    color: rgb(194, 194, 194);
+}
+
+.fa-paper-plane {
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.fa-paper-plane:hover {
+    color: rgb(194, 194, 194);
+}
+
+.fa-earth-americas {
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.fa-earth-americas:hover {
+    color: rgb(194, 194, 194);
+}
+
+.fa-boxes-stacked {
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.fa-boxes-stacked:hover {
+    color: rgb(194, 194, 194);
+}

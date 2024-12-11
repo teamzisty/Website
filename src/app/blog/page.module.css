@@ -1,0 +1,161 @@
+.blog {
+    margin: 50px auto;
+    width: 100%;
+    background-color: #181a1b;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container-down {
+    display: grid;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.top {
+    border-radius: 10px;
+    border: 1px solid #2e2e2e;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.top:hover {
+    transform: translateY(-5px);
+}
+
+.top i {
+    font-size: 30px;
+}
+
+.top-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #d4d4d4;
+}
+
+.top-desc {
+    font-size: 1em;
+    color: #aaaaaa;
+}
+
+.box {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+}
+
+.box .togs {
+    font-size: 15px;
+    color: #4c5153;
+    margin-bottom: -15px;
+}
+
+.box .title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #d4d4d4;
+}
+
+.box .desc {
+    font-size: 1em;
+    color: #aaaaaa;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .header-image {
+        width: 100%;
+        height: auto !important;
+        object-fit: cover;
+        border-radius: 10px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .box-togs {
+        font-size: 13px;
+        color: #4c5153;
+        margin-bottom: -15px;
+    }
+
+    .box-title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #d4d4d4;
+    }
+
+    .box-desc {
+        font-size: 0.9em;
+        color: #aaaaaa;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 25px;
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .header-image {
+        width: 100%;
+        height: auto !important;
+        object-fit: cover;
+        border-radius: 10px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .box-togs {
+        font-size: 13px;
+        color: #4c5153;
+        margin-bottom: -15px;
+    }
+
+    .box-title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #d4d4d4;
+    }
+
+    .box-desc {
+        font-size: 0.9em;
+        color: #aaaaaa;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin-bottom: 25px;
+        margin-top: -30px;
+    }
+}
