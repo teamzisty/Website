@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { remark } from 'remark'
 import html from 'remark-html'
 import gfm from 'remark-gfm'
-import styles from '../styles/terms.module.css'
+import styles from '../../styles/terms.module.css'
 
 export const metadata: Metadata = {
     title: 'Terms of Service',
