@@ -4,7 +4,7 @@ import html from 'remark-html'
 import gfm from 'remark-gfm'
 import { getPostBySlug, getAllPosts } from '../../../../lib/posts'
 import { formatDate } from '../../../../lib/dateFormat'
-import styles from './page.module.css'
+import styles from '@/styles/blog/content.module.css'
 
 export async function generateStaticParams() {
     const posts = await getAllPosts()

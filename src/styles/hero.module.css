@@ -1,0 +1,225 @@
+.hero {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    margin-top: 50px;
+}
+
+.contents {
+    padding-right: 100px;
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+    order: 1;
+}
+
+.animation {
+    width: 100%;
+    min-height: 60vh;
+    margin-top: 30px;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 1),
+            rgb(53, 53, 53),
+            rgba(0, 0, 0, 1));
+    background-size: 400% 400%;
+    animation: gradientMove 3s ease infinite, fadeIn 1s ease-out;
+    order: 2;
+}
+
+.animation img {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.animation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgb(18, 18, 18));
+    pointer-events: none;
+}
+
+.animation::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 5000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.2;
+    animation: noise 1s steps(2) infinite;
+    pointer-events: none;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.7;
+    }
+
+    25% {
+        opacity: 0.9;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        opacity: 0.7;
+    }
+}
+
+
+@keyframes noise {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-5%, 5%);
+    }
+
+    40% {
+        transform: translate(5%, -5%);
+    }
+
+    60% {
+        transform: translate(-5%, -5%);
+    }
+
+    80% {
+        transform: translate(5%, 5%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.048);
+    border: 1px solid #252525;
+    color: #cccccc;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    animation: fadeIn 2s ease-out;
+}
+
+.hero h1 {
+    color: #d1d1d1;
+    font-size: 55px;
+    font-weight: 80px;
+    line-height: 1.2;
+    margin-top: 20px;
+    animation: fadeIn 2.5s ease-out;
+}
+
+.hero .description {
+    color: #868686;
+    font-size: 25px;
+    font-weight: 80px;
+    animation: fadeIn 3s ease-out;
+    padding-bottom: 30px;
+}
+
+.real {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 80px;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tag {
+        margin-bottom: 5px;
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero .description {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .real {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .animation img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .animation img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tag {
+        margin-bottom: 5px;
+        font-size: 9px;
+    }
+
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .real {
+        font-size: 32px;
+    }
+
+    .hero .we {
+        font-size: 15px;
+    }
+}

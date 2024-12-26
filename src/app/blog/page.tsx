@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { getAllPosts } from '../../../lib/posts';
 import { Post } from '../../../types/post';
 import { formatDate } from '../../../lib/dateFormat'
-import styles from './page.module.css'
+import styles from '@/styles/blog/contents.module.css'
 
 const defaultHeader = "https://zisty.net/images/posts/default-header.jpg";
 

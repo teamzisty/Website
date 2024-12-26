@@ -1,0 +1,56 @@
+.headerClass {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px 10px 10px 10px;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.leftLinks {
+    order: 1;
+}
+
+.rightLinks {
+    order: 2;
+    margin-right: 19px;
+}
+
+.headerA {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.headerA img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.headerB {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.headerB:hover {
+    text-decoration: underline;
+    color: #ffffffb6;
+}
+
+.Brands {
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.Brands:hover {
+    color: rgb(194, 194, 194);
+}

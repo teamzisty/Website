@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { Metadata } from 'next'
 import { remark } from 'remark'
 import html from 'remark-html'

@@ -1,31 +1,21 @@
-"use client";
-
 export const runtime = 'edge';
-
 import Image from "next/image";
-import { useEffect } from 'react';
-import hello from "@/assets/Images/hello.png";
-import styles from './page.module.css'
+import hero from "@/styles/hero.module.css";
+import logo from "@/assets/zisty_header.png";
 
 export default function Home() {
-  useEffect(() => {
-    document.title = "Zisty";
-
-    window.onload = function () {
-      const container = document.querySelector('.container');
-      if (container) {
-        container.classList.add('fade-in');
-      }
-    }
-  }, []);
-
   return (
-    <>
-      <div className={styles.container}>
-        <p>Engineering Team</p>
-        <h1>We turn the<br /><span className={styles.gradation}>Unreal to Real</span></h1>
-        <Image src={hello} width={1000} height={600} alt="Hello" />
+    <main className="home">
+      <div className={hero.hero}>
+        <div className={hero["contents"]}>
+          <p className={hero.tag}>Welcome to Zisty</p>
+          <h1>Our mission is to<br />“turn the unreal into reality.”</h1>
+          <p className={hero.description}>We are a community team of mainly Japanese students who love programming.</p>
+        </div>
+        <div className={hero["animation"]}>
+          <Image src={logo} width={500} height={500} alt="hero" className={hero.real} />
+        </div>
       </div>
-    </>
+    </main>
   );
 }
